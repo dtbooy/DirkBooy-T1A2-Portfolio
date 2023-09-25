@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Style>
+    header{
+        border: solid 1px pink
+    }
+div {
+    height: 100px;
+    width:100%;
+    border: solid 1px ;
+}
+.name {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+#posit{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-end;
+}
+#line-1, #line-2{
+    height: 2px;
+    width:100px;
+    border: solid red 1px
+}
+#A{
+    width: 2px;
+    height: 25px;
+    /* transform: scaleX(2) scaleY(10); */
+    /* translate: 1px; */
+    /* position: relative;
+    top: -1em; */
+
+}
+#B{
+    width: 25px;
+    height: 25px;
+    border: 0.05px solid red;
+    border-radius:50%;
+    overflow: hidden;
+    
+}
+</Style>
+<body>
+    <header>
+    <div class="name">
+        <div id="B"><a href="index.html"><img src="http://placekitten.com/25"></a></div>
+        Dirk Booy
+        <div id="A"></div>
+        
+    </div>
+    <div id="posit">
+        web 
+        <div id="line-1"></div>
+        developer
+        <div id="line-2"></div>
+    </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 
+header  
+Nav
+footer
+main
+section
+*/
+
+/* default header style for pages */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    min-height: 10vh;
+}
+/* special header style for homepage (index.html) */
+#splash{
+    flex-direction: column;
+    min-height: 5vh;
+    padding:1rem;
+    }
+    #photo{
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid white;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        left: -1rem;
+        top: 0.5rem;
+    }
+    /* format name */
+    #name {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-size: 4rem;
+    }
+
+    #position{
+        font-size: 1.5rem;
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items:flex-end;
+    }
+    /* Underline of Web */
+    .h-line-1 {
+        height: .1rem;
+        background-color: maroon;
+        width: 20vw;
+        align-self: flex-end;
+    }
+    /* Underline of Developer */
+    .h-line-2
+    {
+        height: .1rem;
+        background-color: maroon;
+        width: 40vw;
+    }
+
+/* ************** */
+/* Navigation Bar */
+/* ************** */
+nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;   
+}
+    nav ul {
+        /* remove bullet points */
+        list-style-type: none;
+        overflow: hidden;
+        background-color: grey;
+        min-height: 1.5rem;
+    }
+
+    nav li{
+        /* Make the nav links in-line */
+        float:left;
+        width: 80px; 
+    }
+    
+    nav li a {
+        display: block;
+        color: rgb(0, 255, 42);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        border-right: solid 1px black;
+    }
+    /* Highlight the navbar link on hover */
+    nav ul li a:hover {
+        background-color:black;
+        color: blueviolet;
+    }
+    /* Set the current page link indicator */
+    .you-are-here{
+        background-color: rgb(255, 0, 221);
+    }
+/* ****************** */
+/* End Navigation Bar */
+/* ****************** */
+
+/* ****** */
+/* Footer */
+/* ****** */
+.footspacer {
+    min-height: 10vh;
+}
+footer {
+    /* Make the footer fixed to the bottom of the window */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    color:white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem 0 2rem;
+   
+}
+/* standardise the size of Social links logos */
+#soc-links {
+    /* align-self: center; */
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 150px;
+    justify-content:space-around;
+    align-items: center;
+}
+#soc-links img {    
+    width:5vh;
+    height:5vh;
+
+    }
+
+/* ********** */
+/* End Footer */
+/* ********** */
+
+
+main{
+    display:flex;
+    flex-direction: column;
+}
+
