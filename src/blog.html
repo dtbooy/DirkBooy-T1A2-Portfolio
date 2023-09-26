@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dirk Booy - Portfolio</title>
+    <title>Dirk Booy - Blog</title>
     <!-- Link stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +11,8 @@
     <header>
         <!-- Website header -->
         <!-- Logo -->
-        <img src="http://placekitten.com/100/50" alt="logo">
+        <img src="images/logo-site.png" alt="logo">
+        <h1>Dirk Booy - Blog</h1>
 
     </header>
     <nav>
@@ -24,12 +25,105 @@
             <li><a class="you-are-here" href="blog.html">Blog</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="blog-main">
+        <!-- Flex-box to hold blog post containers -->
+        <section id="blog-container">
+            <!-- blog post container -->
+            <article class="content-box">                
+                <section>
+                    <div class="anchor" id="blog5"></div>
+                    <h2>Blog Post 5</h2>
+                    <time>25 September 2023</time>
+                </section>
+                <figure>
+                    <img src="images/blog5-img1.jpg" alt="there is no picture">
+                </figure>
+                <section>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ratione voluptate ducimus maiores ab impedit, accusamus eligendi soluta beatae, nobis corporis hic, nisi deserunt totam laborum fugit doloribus! Odit, omnis.</p>
+                </section>
+            </article>
+
+            <article class="content-box">
+                <section>
+                    <div class="anchor" id="blog4"></div>
+                    <h2>Blog Post 4</h2>
+                    <time>25 September 2023</time>
+                </section>
+                <figure>
+                    <img src="images/blog4-img1.jpg" alt="there is no picture">
+                </figure>
+                <section>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ratione voluptate ducimus maiores ab impedit, accusamus eligendi soluta beatae, nobis corporis hic, nisi deserunt totam laborum fugit doloribus! Odit, omnis.</p>
+                </section>
+            </article>
+            <article class="content-box">
+                <section>
+                    <div class="anchor" id="blog3"></div>
+                    <h2>Blog Post 3</h2>
+                    <time>25 September 2023</time>
+                </section>
+                <figure>
+                    <img src="images/blog3-img1.jpg" alt="there is no picture">
+                </figure>
+                <section>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ratione voluptate ducimus maiores ab impedit, accusamus eligendi soluta beatae, nobis corporis hic, nisi deserunt totam laborum fugit doloribus! Odit, omnis.</p>
+                </section>
+            </article>
+            <article class="content-box">
+                <section>
+                    <div class="anchor" id="blog2"></div>
+                    <h2>Blog Post 2</h2>
+                    <time>25 September 2023</time>
+                </section>
+                <figure>
+                    <img src="images/blog2-img1.jpg" alt="there is no picture">
+                </figure>
+                <section>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ratione voluptate ducimus maiores ab impedit, accusamus eligendi soluta beatae, nobis corporis hic, nisi deserunt totam laborum fugit doloribus! Odit, omnis.</p>
+                </section>
+            </article>
+            <article class="content-box">
+                <section>
+                    <div class="anchor" id="blog1"></div>
+                    <h2>Blog Post 1</h2>
+                    <time>25 September 2023</time>
+                </section>
+                <figure>
+                    <img src="images/blog1-img1.jpg" alt="there is no picture">
+                </figure>
+                <section>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ratione voluptate ducimus maiores ab impedit, accusamus eligendi soluta beatae, nobis corporis hic, nisi deserunt totam laborum fugit doloribus! Odit, omnis.</p>
+                </section>
+            </article>
+        </section>
+        <aside id="blog-list" class="content-box">
+            <h2>Latest Blog Posts</h2>
+            <ul>
+                <li><a href="blog.html#blog5">Blog post 5 - <time>25/09/2023</time></a></li>
+                <li><a href="blog.html#blog4">Blog post 4 - <time>25/09/2023</time></a></li>
+                <li><a href="blog.html#blog3">Blog post 3 - <time>25/09/2023</time></a></li>
+                <li><a href="blog.html#blog2">Blog post 2 - <time>25/09/2023</time></a></li>
+                <li><a href="blog.html#blog1">Blog post 1 - <time>25/09/2023</time></a></li>
+            </ul>
+        </aside>   
+
 
     </main>
     <footer>
-        <!-- Footer - contains socials links & Copyright info-->
-        <p>Copyright &copy; 2023</p>
+        <!-- contains socials links & Copyright info-->
+        <div class="soc-container">
+            <div>See more:</div>
+            <a href="https://www.linkedin.com/in/dirk-booy-270b67290">
+                <img src="images/icon-linkedin.png" alt="Linkedin Profile">
+            </a>
+            <a href="https://github.com/dtbooy">
+                <img src="images/icon-github.png" alt="Github Profile">
+            </a>
+        </div>
+        <div class="copy-container">
+            <p>Copyright &copy; 2023 Dirk Booy</p>
+        </div>
+
     </footer>
 </body>
 </html>

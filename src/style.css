@@ -6,38 +6,40 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* 
-header  
-Nav
-footer
-main
-section
-*/
+h1{
+    color:#fbfcff
+}
+h2{
+    color:#720e07
+}
 
 /* default header style for pages */
+body{
+    background-color:#000514;
+}
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: black;
-    color: white;
+    color: #fbfcff;
     min-height: 10vh;
+    min-width:320px;
+    padding: 0 1rem;
+
+}
+header img {
+    width: 8vh;
+    justify-self: flex-start;
 }
 /* special header style for homepage (index.html) */
-#splash{
+    #splash{
     flex-direction: column;
-    min-height: 5vh;
+    min-height: 50vh;
     padding:1rem;
     }
-    #photo{
-        width: 3rem;
-        height: 3rem;
-        border: 2px solid white;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        left: -1rem;
-        top: 0.5rem;
+    #main-logo img {
+        width: 16vh;
+
     }
     /* format name */
     #name {
@@ -72,15 +74,18 @@ header {
 /* Navigation Bar */
 /* ************** */
 nav {
-    position: -webkit-sticky; /* Safari */
+    /* make Nav bar persistently  */
+    position: -webkit-sticky; /*required to make navbar sticky in Safari */
     position: sticky;
-    top: 0;   
+    top: 0;
+    /* make sure the navbar stays on top */
+    z-index:1;
 }
     nav ul {
         /* remove bullet points */
         list-style-type: none;
         overflow: hidden;
-        background-color: grey;
+        background-color: #000514;
         min-height: 1.5rem;
     }
 
@@ -92,20 +97,20 @@ nav {
     
     nav li a {
         display: block;
-        color: rgb(0, 255, 42);
+        color: #fbfcff;
         text-align: center;
-        padding: 14px 16px;
+        padding: 14px 12px;
         text-decoration: none;
-        border-right: solid 1px black;
+        border-right: solid 1px #d0ccd0;
     }
-    /* Highlight the navbar link on hover */
-    nav ul li a:hover {
+    /* Highlight the navbar link on press for mobile or hover for a pointer */
+    nav a:active, nav a:hover {
         background-color:black;
-        color: blueviolet;
+        color: #E8Ec67;
     }
     /* Set the current page link indicator */
-    .you-are-here{
-        background-color: rgb(255, 0, 221);
+    nav ul li .you-are-here{
+        background-color: #720e07;
     }
 /* ****************** */
 /* End Navigation Bar */
@@ -114,47 +119,134 @@ nav {
 /* ****** */
 /* Footer */
 /* ****** */
-.footspacer {
-    min-height: 10vh;
-}
-footer {
+    /* setup initial footer flex-box to stack social links ontop of copyright notice (for mobile viewing)*/
+    footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
     /* Make the footer fixed to the bottom of the window */
     position: fixed;
     bottom: 0;
-    width: 100%;
-    height: 10vh;
-    background-color: black;
-    color:white;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 2rem 0 2rem;
-   
-}
-/* standardise the size of Social links logos */
-#soc-links {
-    /* align-self: center; */
-    display: flex;
-    flex-wrap: nowrap;
-    min-width: 150px;
-    justify-content:space-around;
-    align-items: center;
-}
-#soc-links img {    
+    width:100%;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    min-height:10vh;
+    background-color: #000514;
+    color: #fbfcff;
+    }
+    /* add a space below to ensure no content is blocked by the footer being out of flow */
+    .footspacer {
+        min-height: 10vh;
+        background-color: #000514;
+    }
+    /* scale the size of social links logos with footer height (based on vh) minimum size justs smaller than the text*/
+    footer img {
     width:5vh;
-    height:5vh;
-
+    min-width: 0.9em;
+    max-width: 2em;
     }
 
+    /* Align footer social media links evenly*/
+    .soc-container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .copy-container{
+        /* center copywrite notice in copy-container*/
+        display: flex;    
+        justify-content: center; /*horizontally center text*/
+        align-items: center; /*vertically center text*/
+
+    }
 /* ********** */
 /* End Footer */
 /* ********** */
 
-
 main{
     display:flex;
+}
+#main-index{
     flex-direction: column;
+    background-color:#000514;
 }
 
+
+/* default formating for content cards */
+.content-box {
+    margin:0.5rem 1rem 0.5rem 1rem;
+    padding:1rem;
+    text-align:justify;
+    border:#720e07 solid 1px;
+    background-color: #d0ccd0;
+}
+
+.content-box ul {
+    /* move the lists style out so it aligns with the text */
+    margin:1rem;
+}
+
+/* -----------blog.html------------- */
+
+#blog-main{
+    flex-direction: column-reverse;
+}
+#blog-main figure img{
+    max-height: 50vh; 
+    max-width: 90%;
+}
+#blog-main figure {
+    /* center  */
+    display:flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+/* internal page links need an anchorpoint the height of the floating navbar above the actual starting point this code makes the div anchor point invisble */
+.anchor{
+    position: relative;
+    width: 0px;
+    z-index: -1;
+    top: -3rem;
+}
+
+/* -------Media Breakpoints-------- */
+
+/*Break point - Tablet (Screen size > 481px+) */
+@media only screen and (min-width: 480px) {
+    
+    footer{
+        /* display copyright notice next to social links */
+        flex-direction:row;
+    }
+        .soc-container{
+            /* grow to maximum of 250px to keep soc media links together */
+            flex:1;
+            max-width: 250px;
+        }
+        .copy-container{
+            /*align right*/
+            flex:1.1;
+            justify-content: flex-end;
+            padding-right: 0.5rem;
+        }
+    /* end footer */
+}
+
+/*Break point - Laptop (small screen ~770px+) */
+@media only screen and (min-width: 770px) {
+    #blog-main{
+        /* change the flex direction so the blog post aside appears to the right of the blog container */
+        flex-direction: row;
+    }
+    #blog-container {
+        /*  */
+        flex:2;
+    }
+    /* Blog list to sidebar */
+    #blog-list{
+        /* set the baseline % for sidebar to be x%  */
+        flex:1;
+        max-width:400px;
+
+    }
+}
