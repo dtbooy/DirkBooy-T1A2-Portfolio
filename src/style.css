@@ -186,6 +186,9 @@ main{
         width: 0.9em; 
         margin-left: -0.9em; 
     }
+    .content-box p{
+        padding: 0.5rem
+    }
 /* -----------blog.html------------- */
 /* make the blog list appear  */
 
@@ -218,7 +221,7 @@ main{
 
 /* formatting for Call to action buttons  */
 .button{
-    padding:0.2rem 0.5rem;
+    padding:1rem;
     margin: 0.0rem 0.5rem 0 0.5rem;
     background-color: #720e07;
     border: solid 2px #000514;
