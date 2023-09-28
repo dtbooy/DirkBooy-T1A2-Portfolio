@@ -7,16 +7,34 @@
     <!-- Link stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    div{
+        border: solid 1px red;
+        width: 100px;
+        background:blue;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fbfcff;
+        min-height: 10vh;
+        min-width:320px;
+        padding: 0 1rem;
+    }
+    header img {
+        width: 8vh;
+        min-width:1.5rem;
+        justify-self: flex-start;
+    }
+</style>
 <body>
     <header>
         <!-- Website header -->
         <!-- Logo -->
-        <div class="header-left">
-            <img src="images/logo-site.png" alt="logo">
-        </div>
-        <div class="header-right">
-            <h1>About Dirk Booy</h1>
-        </div>
+        <img src="images/logo-site.png" alt="logo">
+        <!-- </div> -->
+        <h1>About Dirk Booy</h1>
     </header>
     <nav>
         <!-- Navigation Bar links -->
@@ -44,7 +62,7 @@
         </div>
         <div class="copy-container">
             <p>Copyright &copy; 2023 Dirk Booy</p>
-        </div>
+        </div> 
 
     </footer>
 </body>

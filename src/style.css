@@ -8,13 +8,14 @@
 /* default theme styles */
     h1 {
         color:#fbfcff;
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* H1 font-size reduced for small screen compatibility */
     }
     h2 {color:#720e07}
     a:visited {color:#000514}
+    a:link {color:#720e07}
     body{background-color:#000514;}
 
-/* style for standard header banner */
+/* s------------Standard header banner ----------*/
     header {
         display: flex;
         justify-content: space-between;
@@ -26,10 +27,16 @@
     }
     header img {
         width: 8vh;
+        min-width:1.5rem;
         justify-self: flex-start;
     }
+    header div{
+        flex:1;
+        text-align: center;
 
-/* style for special header banner for index.html */
+    }
+
+/* --------Hero Banner (header for index.html)-------- */
     #splash{
     flex-direction: column;
     min-height: 50vh;
@@ -39,13 +46,13 @@
         width: 16vh;
 
     }
-    /* format name in banner*/
+    /* format name text in hero banner*/
     #name {
         flex-direction: row;
         flex-wrap: nowrap;
         font-size: 4rem;
     }
-
+    /* format position text in hero banner*/
     #position{
         font-size: 1.5rem;
         width: 100%;
@@ -53,72 +60,65 @@
         flex-direction: column;
         align-items:flex-end;
     }
-    /* Underline of Web */
+    /* Underline for "Web" in Hero Banner*/
     .h-line-1 {
-        height: .1rem;
+        height: 2px;
         background-color: maroon;
         width: 20vw;
         align-self: flex-end;
     }
-    /* Underline of Developer */
+    /* Underline of "Developer" in Hero Banner */
     .h-line-2
     {
-        height: .1rem;
+        height: 2px;
         background-color: maroon;
-        width: 40vw;
+        width: 30vw;
     }
 
-/* ************** */
-/* Navigation Bar */
-/* ************** */
+/* ---------Navigation Bar----------- */
 nav {
     /* make Nav bar persistently  */
     position: -webkit-sticky; /*required to make navbar sticky in Safari */
     position: sticky;
     top: 0;
-    /* make sure the navbar stays on top */
-    z-index:1;
-}
-    nav a:visited {color:#fbfcff}
-    
-    nav ul {
-        /* remove bullet points */
-        list-style-type: none;
-        overflow: hidden;
-        background-color: #000514;
-        min-height: 1.5rem;
-    }
 
-    nav li{
-        /* Make the nav links in-line */
-        float:left;
-        width: 80px; 
-    }
-    
-    nav li a {
-        display: block;
-        color: #fbfcff;
+    z-index:1;     /* make sure the navbar stays on top while scrolling */
+    background-color:#000514;
+    /* flex-box, align nav link to left of screen  */
+    display:flex;
+    justify-content:flex-start 
+
+}
+    /* Reset the default link values for the menu bar */
+    nav a:visited, nav a:link {color:#fbfcff}
+
+    /* Foramt the links in the nav bar to navigation buttons */
+    nav a{
+        flex:1 0 80px; /* flex buttons allows them to grow slightly larger on wider screens */
+        min-height: 1.5rem;
         text-align: center;
-        padding: 14px 12px;
-        text-decoration: none;
-        border-right: solid 1px #d0ccd0;
+        text-decoration: none;     /* Remove text decoration formatting from the navigation links */
+        color: #fbfcff;
+        padding: 0.75rem 0px;        
+        border-right: solid 1px #d0ccd0        
+    }
+    /* added a spacer div to have a small amount of flex growth in the nav bar button width as the window expands */
+    nav div{
+        flex:50 0 0%;
+    }
+    /* Set the current page link indicator */
+    nav .you-are-here{
+        background-color: #720e07;
     }
     /* Highlight the navbar link on press for mobile or hover for a pointer */
     nav a:active, nav a:hover {
-        background-color:black;
-        color: #E8Ec67;
+        background-color:#d0ccd0;
+        color: #720e07;
     }
-    /* Set the current page link indicator */
-    nav ul li .you-are-here{
-        background-color: #720e07;
-    }
-/* ****************** */
-/* End Navigation Bar */
-/* ****************** */
+ 
+/* --------End Navigation Bar----------- */
 
-/* ****** */
-/* Footer */
-/* ****** */
+/* --------Footer -------*/
     /* setup initial footer flex-box to stack social links ontop of copyright notice (for mobile viewing)*/
     footer{
     display:flex;
@@ -179,7 +179,7 @@ main{
 }
 
 .content-box ul {
-    margin:1rem; /* move the lists style out so it aligns with the text */
+    margin: 0.25rem 1rem 0.5rem; /* move the lists style out so it aligns with the text */
     list-style-type: none; /* remove bullet point to be replaced with theme styled markers */
     text-align: left; /* align text left in lists (rather than justified in paragraphs) */
     font-size: 0.8em; /* make list text slightly smaller than regular text */
@@ -231,6 +231,7 @@ main{
     margin: 0.0rem 0.5rem 0 0.5rem;
     background-color: #720e07;
     border: solid 2px #000514;
+    text-align: center;
 
 }
     /* adjust link formating for call to action buttions */
@@ -254,8 +255,6 @@ main{
         flex-wrap: wrap;
     }
     
-
-
     footer{
         /* display copyright notice next to social links */
         flex-direction:row;
@@ -278,7 +277,7 @@ main{
 @media only screen and (min-width: 770px) {
 
 
-    #blog-main{
+    #main-blog{
         /* change the flex direction so the blog post aside appears to the right of the blog container */
         flex-direction: row;
     }
@@ -292,5 +291,19 @@ main{
         flex:1;
         max-width:400px;
 
+    }
+}
+
+/*Break point - wide screen ~1100px+) */
+@media only screen and (min-width: 1100px) {
+    /* Align Blog and Image side-by-side below heading when screen is wide enough  */
+    .blog-and-image{
+    display:flex;
+    }
+    .blog-text{
+        flex:1;
+    }
+    #main-blog figure{
+        flex:1;     
     }
 }
