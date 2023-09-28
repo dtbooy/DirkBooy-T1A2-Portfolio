@@ -40,7 +40,7 @@
     max-height: 50vh; 
     max-width: 90%;
     }
-
+    /* set the default style for figure captions */
     figcaption {
         font-style:italic;
         font-size:.8rem;
@@ -61,7 +61,7 @@
     margin: 0.25rem 1rem 0.5rem; /* move the lists style out so it aligns with the text */
     list-style-type: none; /* remove bullet point to be replaced with theme styled markers */
     text-align: left; /* align text left in lists (rather than justified in paragraphs) */
-    font-size: 0.8em; /* make list text slightly smaller than regular text */
+    font-size: 0.9em; /* make list text slightly smaller than regular text */
 }
     /* add back in bullet markers, change colour and realign to text*/
     .content-box li::before {
