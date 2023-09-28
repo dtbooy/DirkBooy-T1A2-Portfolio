@@ -20,7 +20,61 @@
         flex-direction:column; /*  stack header-nav-main-footer ontop of eachother */
         height:100vh; /* limit size to screen height to viewport so header/nav/footer stay in place */
     }
+    main{
+        display:flex;
+        flex:1;
+        overflow:scroll;
+        padding:1rem;
+        flex-direction: column;
+    }
+    
+    figure {
+       /* Will display <Figure> content on top of eachother (eg fig - caption or multiple figures etc)   */
+       display:flex;
+       flex-direction: column;
+       align-items: center;
+       padding: 0.5rem 0.5rem;
+    }
+    /* Set the max size for images to less than its parent (so they dont overflow the content box) */
+    figure img{
+    max-height: 50vh; 
+    max-width: 90%;
+    }
 
+    figcaption {
+        font-style:italic;
+        font-size:.8rem;
+        text-align:center;
+        padding: 0rem 0.5rem;
+    }
+    /* default formating for content cards */
+.content-box {
+    margin:0.5rem ;
+    padding:1rem;
+    text-align:justify;
+    border:#720e07 solid 1px;
+    background-color: #d0ccd0;
+    flex-grow: 1;
+}
+/* Bullet list formating in content cards */
+.content-box ul {
+    margin: 0.25rem 1rem 0.5rem; /* move the lists style out so it aligns with the text */
+    list-style-type: none; /* remove bullet point to be replaced with theme styled markers */
+    text-align: left; /* align text left in lists (rather than justified in paragraphs) */
+    font-size: 0.8em; /* make list text slightly smaller than regular text */
+}
+    /* add back in bullet markers, change colour and realign to text*/
+    .content-box li::before {
+        content: "\2022"; 
+        color: #720e07; 
+        display: inline-block; 
+        font-weight: 1000;
+        width: 0.9em; 
+        margin-left: -0.9em; 
+    }
+    .content-box p{
+        padding: 0.5rem
+    }
 /* ------------Standard header banner ----------*/
     header {
         display: flex;
@@ -128,7 +182,6 @@
     color: #fbfcff;
     }
 
-
     /* scale the size of social links logos with footer height (based on vh) minimum size justs smaller than the text*/
     footer img {
     width:5vh;
@@ -149,67 +202,18 @@
         align-items: center; /*vertically center text*/
 
     }
-/* ********** */
-/* End Footer */
-/* ********** */
 
-main{
-    display:flex;
-    flex:1;
-    overflow:scroll;
-    padding:1rem;
-    flex-direction: column;
+
+/*-------- Page specific formats ------------*/
+/* ---------About.html------------ */
+
+#about-photo{
+    /* make the profile photo a circle */
+    border-radius:50%;
 }
 
-/* default formating for content cards */
-.content-box {
-    margin:0.5rem ;
-    padding:1rem;
-    text-align:justify;
-    border:#720e07 solid 1px;
-    background-color: #d0ccd0;
-    flex-grow: 1;
-}
-
-.content-box ul {
-    margin: 0.25rem 1rem 0.5rem; /* move the lists style out so it aligns with the text */
-    list-style-type: none; /* remove bullet point to be replaced with theme styled markers */
-    text-align: left; /* align text left in lists (rather than justified in paragraphs) */
-    font-size: 0.8em; /* make list text slightly smaller than regular text */
-}
-    /* add back in bullet markers, change colour and realign to text*/
-    .content-box li::before {
-        content: "\2022"; 
-        color: #720e07; 
-        display: inline-block; 
-        font-weight: 1000;
-        width: 0.9em; 
-        margin-left: -0.9em; 
-    }
-    .content-box p{
-        padding: 0.5rem
-    }
 /* -----------blog.html------------- */
-/* make the blog list appear  */
-
-#main-blog figure img{
-    max-height: 50vh; 
-    max-width: 90%;
-}
-#main-blog figure {
-    /* center  */
-    display:flex;
-    justify-content: center;
-    padding: 0.5rem 0;
-}
-
-/* internal page links need an anchorpoint the height of the floating navbar above the actual starting point this code makes the div anchor point invisble */
-.anchor{
-    position: relative;
-    width: 0px;
-    z-index: -1;
-    top: -3rem;
-}
+/* None for mobile viewing mobile  */
 
 /* -----------resume.html------------- */
 /* container for call to action .buttons */
@@ -238,13 +242,16 @@ main{
         background-color: #000514;       
     }
 
+
 /* -------Media Breakpoints-------- */
+
 /* when on smaller screen in landscape mode (tablet/mobile) */
 @media only screen and (orientation:landscape) and (max-height: 415px) {
-  /* re-order hero banner on index.html to have the Logo next to the script */
+
+    /* ----- index.html ----- */
+    /* re-order hero banner on index.html to have the Logo next to the script */
     #front-banner{
         flex-direction: row;
-
     }
     #big-logo img {
         width: 25vh;
@@ -255,7 +262,6 @@ main{
     /* format position text in hero banner*/
     #position{
         font-size: 5vh;
-
     }
 }
 /*Break point - Tablet (Screen size > 481px+) */
@@ -263,11 +269,13 @@ main{
     h1 {
         font-size: 2rem;
     }
+    /* wrap the content cards below the blurb on index.html */
     #main-index{
         flex-direction: row;
         flex-wrap: wrap;
     }
     
+    /* footer condensensed onto 1 line */
     footer{
         /* display copyright notice next to social links */
         flex-direction:row;
@@ -298,7 +306,7 @@ main{
     #blog-list{
         order:1
     }
-/* scale blog container & sidebar with screen width  */
+    /* scale blog container & sidebar with screen width  */
     #blog-container {
         /*  */
         flex:2;      
@@ -307,8 +315,15 @@ main{
         /* stop sidebar growing too big  */
         flex:1;
         max-width:400px;
-
     }
+    /* change about me section to have photo & text side-by-side */
+    #About-me-summary {
+        display:flex;
+    }
+    #about-photo{
+        min-width: 150px; 
+    }
+
 }
 
 /*Break point - wide screen ~1100px+) */
