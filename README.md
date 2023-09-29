@@ -14,7 +14,7 @@
     * Tech stack (e.g. html, css, deployment platform, etc)
 
 ## 1. Published Portfolio Website Link  
-TBC
+[https://dirk-booy-t1-a2-portfolio.vercel.app/](https://dirk-booy-t1-a2-portfolio.vercel.app/)
 
 ## 2. GitHub Repository Link
 [https://github.com/dtbooy/DirkBooy-T1A2-Portfolio](https://github.com/dtbooy/DirkBooy-T1A2-Portfolio)
@@ -31,6 +31,15 @@ TBC
 ### 3.5 Target audience
 
 ### 3.6 Tech stack 
-* html
-* css
-* Vercel - deployment platfrom
+* Website 
+    * HTML
+    * CSS
+* Deployment Platform - Vercel
+
+    Wireframes and Sitemap: draw.io
+    Website: Semantic HTML and CSS
+    Image optimisation: Image Optimizer and Preview
+    Logo: LOGO.com
+    Deployment: Vercel
+    Resume creation: Canva
+    Slide deck: Powerpoint

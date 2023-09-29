@@ -6,12 +6,18 @@
     <title>Dirk Booy - Blog</title>
     <!-- Link stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- link favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
         <!-- Website header -->
-        <!-- Logo -->
-        <img src="images/logo-site.png" alt="logo">
+        <!-- Logo (linked to index.html) -->
+        <a href="index.html"><img src="images/logo-site.png" alt="logo"></a>
         <div>
             <h1>Dirk's Blog</h1>
         </div>
@@ -37,7 +43,7 @@
             </ul>
         </section>   
         <!-- Flex-box to hold blog post containers -->
-        <section id="blog-container">
+        <div id="blog-container">
             <!-- blog post container -->
             <article class="content-box">  
                 <!-- Heading divider (divisions below the header will be rearranged based on screen size)  -->
@@ -115,7 +121,7 @@
                     </div>
                 </div>
             </article>
-        </section>
+        </div>
 
 
 
@@ -123,11 +129,11 @@
     <footer>
         <!-- Footer Code: contains socials links & Copyright info-->
         <div class="soc-container">
-            <div>See more:</div>
-            <a href="https://www.linkedin.com/in/dirk-booy-270b67290">
+            <div>See more on:</div>
+            <a href="https://www.linkedin.com/in/dirk-booy-270b67290" target="_blank">
                 <img src="images/icon-linkedin.png" alt="Linkedin Profile">
             </a>
-            <a href="https://github.com/dtbooy">
+            <a href="https://github.com/dtbooy" target="_blank">
                 <img src="images/icon-github.png" alt="Github Profile">
             </a>
         </div>
