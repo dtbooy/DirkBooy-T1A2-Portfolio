@@ -96,43 +96,6 @@
 
     }
 
-/* --------Hero Banner (header for index.html)-------- */
-    #front-banner{
-    flex-direction: column;
-    min-height: 30vh;
-    padding:0.5rem 1rem 0rem;
-    }
-    #big-logo img {
-        width: 12.5vh;
-
-    }
-    /* format name text in hero banner*/
-    #name {
-        font-size: 5vh;
-    }
-    /* format position text in hero banner*/
-    #position{
-        font-size: 2.5vh;
-        width: 100%;
-        display:flex;
-        flex-direction: column;
-        align-items:flex-end;
-    }
-
-    #position div{
-        flex:0;
-        height: 0px;
-        border-bottom: solid 1px #720e07;
-    }
-    /* Underline for "Web" in Hero Banner*/
-    #h-line-1 {
-        width: 20vw;
-    }
-    /* Underline of "Developer" in Hero Banner */
-    #h-line-2 {
-        width: 40vw;
-    }
-
 /* ---------Navigation Bar----------- */
     nav {
     /* flex-box, align nav link to left of screen  */
@@ -145,7 +108,6 @@
     /* Foramt the links in the nav bar to navigation buttons */
     nav a{
         flex:1 0 80px; /* flex buttons allows them to grow slightly larger on wider screens */
-        min-height: 1.5rem;
         text-align: center;
         text-decoration: none;     /* Remove text decoration formatting from the navigation links */
         color: #fbfcff;
@@ -154,7 +116,7 @@
     }
     /* added a spacer div to have a small amount of flex growth in the nav bar button width as the window expands */
     nav div{
-        flex:50 0 0%;
+        flex:20 5 0%;
     }
     /* Set the current page link indicator */
     nav .you-are-here{
@@ -203,10 +165,44 @@
 
     }
 
-
 /*-------- Page specific formats ------------*/
-/* ---------About.html------------ */
+/* --------Hero Banner (header for index.html)-------- */
+#front-banner{
+    flex-direction: column;
+    min-height: 30vh;
+    padding:0.5rem 1rem 0rem;
+    }
+    #big-logo img {
+        width: 12.5vh;
 
+    }
+    /* format name text in hero banner*/
+    #name {
+        font-size: 5vh;
+    }
+    /* format position text in hero banner*/
+    #position{
+        font-size: 2.5vh;
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items:flex-end;
+    }
+
+    #position div{
+        flex:0;
+        height: 0px;
+        border-bottom: solid 1px #720e07;
+    }
+    /* Underline for "Web" in Hero Banner*/
+    #h-line-1 {
+        width: 20vw;
+    }
+    /* Underline of "Developer" in Hero Banner */
+    #h-line-2 {
+        width: 40vw;
+    }
+/* ---------About.html------------ */
 #about-photo{
     /* make the profile photo a circle */
     border-radius:50%;
@@ -219,6 +215,7 @@
 /* container for call to action .buttons */
 .action {
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items:center;
 }
@@ -246,7 +243,7 @@
 /* -------Media Breakpoints-------- */
 
 /* when on smaller screen in landscape mode (tablet/mobile) */
-@media only screen and (orientation:landscape) and (max-height: 415px) {
+@media only screen and (max-height: 500px) {
 
     /* ----- index.html ----- */
     /* re-order hero banner on index.html to have the Logo next to the script */
@@ -264,16 +261,18 @@
         font-size: 5vh;
     }
 }
-/*Break point - Tablet (Screen size > 481px+) */
+/*Break point - LArger phones + (Screen size > 481px+) */
 @media only screen and (min-width: 480px) {
     h1 {
         font-size: 2rem;
+        font-weight: bold;
     }
     /* wrap the content cards below the blurb on index.html */
     #main-index{
         flex-direction: row;
         flex-wrap: wrap;
     }
+
     
     /* footer condensensed onto 1 line */
     footer{
@@ -291,43 +290,64 @@
             justify-content: flex-end;
             padding-right: 0.5rem;
         }
-   
+
+        .action {        
+            flex-direction: row;
+        }
 }
 
 
-/*Break point - Laptop (small screen ~770px+) */
+/*Break point - tablet size ( >770px+) */
 @media only screen and (min-width: 770px) {
-
+    /* -----blog.html----- */
     /* change the flex direction so the blog post aside appears to the right of the blog container */
     #main-blog{
         flex-direction: row;
+        /* main doesn't scroll so bloglist stays to the right */
+        overflow: hidden;
     }
     /* make the Blog post list appear on the right */
     #blog-list{
-        order:1
-    }
-    /* scale blog container & sidebar with screen width  */
-    #blog-container {
-        /*  */
-        flex:2;      
-    }
-    #blog-list{
+        order:1;
         /* stop sidebar growing too big  */
         flex:1;
         max-width:400px;
+        height:100%;
+    }
+
+    #blog-container {
+        /* scale blog container & sidebar with screen width  */
+        flex:2;
+        /* set scrolling to occur in the blog-container, so blog list element will stay to the right */
+        overflow:scroll;      
+    }
+
+    /* -----about.html------ */
+    #main-about{
+        /* Make content boxes stack in rows */
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     /* change about me section to have photo & text side-by-side */
-    #About-me-summary {
+    #main-about .content-box{
+        /* let the content boxes spread out evenly in new space */
+        flex:1;       
+    }
+    #main-about #About-me-summary {
+        /* make sure About me summary takes up the whole first row */
+        min-width: calc(100% - 2rem);
+        /* display flex to make photo to appear next to text rather than on top*/
         display:flex;
     }
     #about-photo{
+        /* set a min size for photo */
         min-width: 150px; 
     }
-
 }
 
-/*Break point - wide screen ~1100px+) */
+/*----------Break point - desktop monitor >1100px+)-------- */
 @media only screen and (min-width: 1100px) {
+    h1{font-size:2.5rem}
     /* Align Blog and Image side-by-side below heading when screen is wide enough  */
     .blog-and-image{
     display:flex;
