@@ -5,13 +5,13 @@
     
 1. [A link to your GitHub repo](#2-github-repository-link)
 
-1. [Description of your portfolio website](#3-description-of-your-portfolio-website)
-    * [Purpose](#31-purpose)
-    * [Functionality / features](#32-functionality--features)
-    * [Sitemap](#33-sitemap)
-    * [Screenshots](#34-screenshots)
-    * [Target audience](#35-target-audience)
-    * [Tech stack](#36-tech-stack)
+1. [Description of your portfolio website](#3-description-of-your-portfolio-website)  
+    3.1. [Purpose](#31-purpose)  
+    3.2 [Functionality / features](#32-functionality--features)  
+    3.3 [Sitemap](#33-sitemap)  
+    3.4 [Screenshots](#34-screenshots)  
+    3.5 [Target audience](#35-target-audience)  
+    3.6 [Tech stack](#36-tech-stack)  
 
 ## 1. Published Portfolio Website Link  
 [https://dirk-booy-t1-a2-portfolio.vercel.app/](https://dirk-booy-t1-a2-portfolio.vercel.app/)
@@ -40,35 +40,50 @@ The purpose of this website is to showcases my talent, abilities and coding expe
 
 1. External Links: Links to my LinkedIn and GitHub profiles open in new tabs, making it convenient for users to explore my online presence.
 
-### 3.3 Sitemap
+### 3.3 Sitemap & wireframes
+
 ![sitemap](./docs/site-map.png)
+
+Wireframe - Page Framework
+![Page Framework Wireframe](./docs/wireframe-page-framework.png)  
+Wireframe - index.html
+![Page Framework Wireframe](./docs/wireframe-index.png)  
+Wireframe - about.html
+![Page Framework Wireframe](./docs/wireframe-about.png)  
+Wireframe - resume.html
+![resume.html Wireframe](./docs/wireframe-resume.png)  
+Wireframe - blog.html
+![blog.html Wireframe](./docs/wireframe-blog.png)  
+
+
 
 ### 3.4 Screenshots
 #### index.html
 Mobile  
 ![Mobile](./docs/index-mobile.png)  
-![Mobile](./docs/index-mobile-long.png)  
+![Mobile Landscape](./docs/index-landscape.png)  
+![Mobile Fullsite](./docs/index-mobile-long.png)  
 Tablet  
 ![Tablet](./docs/index-tablet.png)  
 Desktop  
 ![Desktop](./docs/index-desktop.png)  
 #### about.html
 ![Mobile](./docs/about-mobile.png)  
-![Mobile](./docs/about-mobile-long.png)  
+![Mobile Fullsite](./docs/about-mobile-long.png)  
 Tablet  
 ![Tablet](./docs/about-tablet.png)  
 Desktop  
 ![Desktop](./docs/about-desktop.png)  
 #### resume.html
 ![Mobile](./docs/resume-mobile.png)  
-![Mobile](./docs/resume-mobile-long.png) 
+![Mobile Fullsite](./docs/resume-mobile-long.png) 
 Tablet  
 ![Tablet](./docs/resume-tablet.png)  
 Desktop  
 ![Desktop](./docs/resume-desktop.png)  
 #### blog.html
 ![Mobile](./docs/blog-mobile.png)  
-![Mobile](./docs/blog-mobile-long.png)  
+![Mobile Fullsite](./docs/blog-mobile-long.png)  
 Tablet  
 ![Tablet](./docs/blog-tablet.png)  
 Desktop  
