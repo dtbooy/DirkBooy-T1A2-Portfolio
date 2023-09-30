@@ -1,11 +1,11 @@
 # DirkBooy-T1A2-Portfolio
 
 ## Contents
-1. [A link (URL) to your published portfolio website](#1-published-portfolio-website-link) 
+1. [Link to portfolio website](#1-published-portfolio-website-link) 
     
-1. [A link to your GitHub repo](#2-github-repository-link)
+1. [Link to GitHub repo](#2-github-repository-link)
 
-1. [Description of your portfolio website](#3-description-of-your-portfolio-website)  
+1. [Description of portfolio website](#3-description-of-portfolio-website)  
     3.1. [Purpose](#31-purpose)  
     3.2 [Functionality / features](#32-functionality--features)  
     3.3 [Sitemap](#33-sitemap)  
@@ -41,7 +41,7 @@ The purpose of this website is to showcases my talent, abilities and coding expe
 1. External Links: Links to my LinkedIn and GitHub profiles open in new tabs, making it convenient for users to explore my online presence.
 
 ### 3.3 Sitemap & wireframes
-
+Site Map
 ![sitemap](./docs/site-map.png)
 
 Wireframe - Page Framework
@@ -55,41 +55,47 @@ Wireframe - resume.html
 Wireframe - blog.html
 ![blog.html Wireframe](./docs/wireframe-blog.png)  
 
-
-
 ### 3.4 Screenshots
 #### index.html
-Mobile  
-![Mobile](./docs/index-mobile.png)  
-![Mobile Landscape](./docs/index-landscape.png)  
+index.html - Full Page (Mobile)  
 ![Mobile Fullsite](./docs/index-mobile-long.png)  
-Tablet  
+index.html - Mobile  
+![Mobile](./docs/index-mobile.png)   
+index.html - Mobile (landscape)  
+![Mobile Landscape](./docs/index-landscape.png)  
+index.html - Tablet  
 ![Tablet](./docs/index-tablet.png)  
-Desktop  
+index.html - Desktop  
 ![Desktop](./docs/index-desktop.png)  
 #### about.html
-![Mobile](./docs/about-mobile.png)  
+about.html - Full Page (Mobile)  
 ![Mobile Fullsite](./docs/about-mobile-long.png)  
-Tablet  
+about.html - Mobile  
+![Mobile](./docs/about-mobile.png)  
+about.html - Tablet  
 ![Tablet](./docs/about-tablet.png)  
-Desktop  
+about.html -Desktop  
 ![Desktop](./docs/about-desktop.png)  
 #### resume.html
+resume.html - Full Page (Mobile)  
+![Mobile Fullsite](./docs/resume-mobile-long.png)  
+resume.html - Mobile  
 ![Mobile](./docs/resume-mobile.png)  
-![Mobile Fullsite](./docs/resume-mobile-long.png) 
-Tablet  
+resume.html - Tablet  
 ![Tablet](./docs/resume-tablet.png)  
-Desktop  
+resume.html - Desktop  
 ![Desktop](./docs/resume-desktop.png)  
 #### blog.html
-![Mobile](./docs/blog-mobile.png)  
+blog.html - Full Page (Mobile)  
 ![Mobile Fullsite](./docs/blog-mobile-long.png)  
-Tablet  
+blog.html - Mobile  
+![Mobile](./docs/blog-mobile.png)  
+blog.html - Tablet  
 ![Tablet](./docs/blog-tablet.png)  
-Desktop  
+blog.html - Desktop  
 ![Desktop](./docs/blog-desktop.png)  
 ### 3.5 Target audience
-The target audience is recruiters, potential employers and potential co-workers. 
+The target audience is recruiters, potential employers and co-workers. 
 
 ### 3.6 Tech stack 
 * Website 
